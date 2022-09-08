@@ -46,6 +46,20 @@ p.lead {
     font-weight: 400;
 }
 
+p.lead span {
+    font-weight: 700;
+}
+
+.cotact-data {
+    text-align: start;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.cotact-data span {
+    font-weight: 700;
+}
+
 .subheading {
     font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     text-transform: uppercase;
@@ -108,6 +122,10 @@ p.lead {
     }
 }
 
+.social-icons {
+    text-align: end;
+}
+
 .social-icons .social-icon {
     display: inline-flex;
     align-items: center;
@@ -151,7 +169,7 @@ section.resume-section .resume-section-content {
     section.resume-section {
         padding-left: 3rem;
         padding-right: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
