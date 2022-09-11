@@ -1,0 +1,40 @@
+<section class="resume-section" id="projects">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Projects</h2>
+
+        <div class="row" *ngIf="listOfProjects">
+
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col" *ngFor="let projet of listOfProjects; let i = index">
+                        <div class="card h-100">
+                            <img src={{listOfProjects[i].imageURL}} class="card-img-top" alt="imagen proyecto" />
+                            <div class="card-body">
+                                <h5 class="card-title">{{listOfProjects[i].projectTitle}}</h5>
+                                <p class="card-text">{{listOfProjects[i].shortDescription}}</p>
+                                <p class="card-text">{{listOfProjects[i].longDescription}}</p>
+                                <div *ngFor="let tecnology of listOfProjects[i].tecnologies;">
+                                    <span class="badge bg-primary">{{tecnology}}</span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="footer-projet">
+                                    <a class="btn btn-dark" href={{listOfProjects[i].link}} target="_blank"
+                                        rel="noopener noreferrer">View Project</a>
+
+                                    <a class="btn btn-dark" href={{listOfProjects[i].githublink}} target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>Github
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
