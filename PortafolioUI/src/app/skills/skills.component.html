@@ -1,7 +1,7 @@
 <section class="resume-section" id="skills">
     <div class="resume-section-content">
       <h2 class="mb-5">Skills</h2>
-
+      
       <div class="subheading mb-0">Main Stack</div>
 
       <app-tools-icons></app-tools-icons>
@@ -18,7 +18,7 @@
           <div id="summaryProgramming" class="accordion-collapse collapse hide"
           aria-labelledby="headingTwo" >
             <div class="accordion-body">
-              <app-summary-skills></app-summary-skills>
+              
             </div>
           </div>
         </div>
@@ -33,6 +33,7 @@
           <div id="detailedProgramming" class="accordion-collapse collapse hide"
           aria-labelledby="headingThree" >
             <div class="accordion-body">
+
             </div>
           </div>
         </div>
@@ -47,16 +48,96 @@
           <div id="nonProgrammingSkills" class="accordion-collapse collapse hide"
           aria-labelledby="headingFour" >
             <div class="accordion-body">
-              <ul class="fa-ul mb-0">
+              <ul class="fa-ul mb-0 longSummary">
+                <li>
+                  <i class="fa-li fa fa-check mb-4"></i>
+                  Connection between the application and the database using ORM's
+                  like <span>Entity Framework (EF)</span> and <span>Dapper</span>, I use EF
+                  <span>migrations</span> to adjust and update the database design, without
+                  losing information and having all the changes tracked.
+                </li>
+              
+                <br>
+              
                 <li>
                   <i class="fa-li fa fa-check"></i>
-                  Languages: English B1 (Conversational), Spanish Native.
+                  <span>REST API's</span> for communication between <span>client,
+                    server and database</span> through methods based on the <span>HTTP
+                    protocol</span>. Testing and documentation of methods (end points)
+                  through <span>Postman</span> and <span>Swagger</span>.
+                </li>
+              
+                <br>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>User system</span> using <span>Identity</span>, user
+                  creation, email confirmation, password confirmation and management,
+                  <span>authorization</span> and <span>authentication</span> using
+                  <span>JSON Web Token (JWT)</span> through HTTP request.
+                </li>
+              
+                <br>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  Additional ASP.NET Core tools/patterns/libraries:
+                  <span>Model-View-Controller(MVC)</span> pattern, <span>dependency
+                    injection</span> (Scope, Transient and Singleton),
+                  <span>middleware</span> creation and use, object mapping with
+                  <span>AutoMapper</span>, unit testing with <span>xUnit</span>,
+                  queries in C# using <span>LINQ</span> etc.
+                </li>
+              
+                <br>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  Relational databases using <span>SQL Server</span>,
+                  <span>CRUD's</span> development, table design and
+                  correlation between them using <span>foreign keys</span>.
+                  <span>Internal programming language</span> for
+                  SQL Server queries. Union of information from several
+                  tables through <span>INNER JOINS</span>. Use of
+                  <span>store procedures</span>, <span>triggers</span>
+                  and <span>constraints</span>.
+                </li>
+              
+                <br>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  Basic frontend using <span>Angular</span> (TypeScript, HTML
+                  and CSS) and <span>Razor</span> (C#, HTML and CSS). Simple
+                  views focused on displaying sorted information and testing
+                  the methods in the Backend, for example, <span>posting
+                    information</span> from a form to the database, <span>getting
+                    information</span> from the database and <span>displaying the
+                    sorted information</span> in the browser.
+                </li>
+              
+                <br>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  Support Tools: <span>Git/Github</span> for code version control,
+                  <span>debugger</span> to debug the code, <span>Azure</span> to
+                  deploy applications in the cloud, <span>Visual
+                    Studio/Visual Studio Code</span> as IDE's.
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+
+
+      <!-- <ul class="fa-ul mb-0">
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Languages: English B1 (Conversational), Spanish Native.
+        </li>
+      </ul> -->
         
     </div>
 </section>

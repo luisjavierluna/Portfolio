@@ -6,7 +6,6 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ToolsIconsComponent } from './skills/tools-icons/tools-icons.component';
-import { SummarySkillsComponent } from './skills/summary-skills/summary-skills.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { SummarySkillsComponent } from './skills/summary-skills/summary-skills.c
     HomeComponent,
     SkillsComponent,
     ToolsIconsComponent,
-    SummarySkillsComponent
   ],
   imports: [
     BrowserModule
