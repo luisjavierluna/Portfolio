@@ -61,4 +61,8 @@ p {
     background-color: whitesmoke;
     color: rgb(61, 61, 61);
     /* color: #3859bd; */
-}   
+}
+
+span {
+    font-weight: 700;
+}

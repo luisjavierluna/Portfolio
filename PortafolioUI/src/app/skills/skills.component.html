@@ -9,44 +9,71 @@
       <div class="accordion" id="accordionSkills">
 
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
+          <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
             data-bs-target="#summaryProgramming" aria-expanded="true" aria-controls="summaryProgramming">
-              <div class="subheading mb-0">Summarized Programming Skills</div>
+              <div class="subheading mb-0">Skills: Short Summary</div>
             </button>
           </h2>
-          <div id="summaryProgramming" class="accordion-collapse collapse hide"
-          aria-labelledby="headingTwo" >
+          <div id="summaryProgramming" class="accordion-collapse collapse show"
+          aria-labelledby="headingOne" data-bs-parent="#accordionSkills">
             <div class="accordion-body">
+              <ul class="fa-ul mb-0 longSummary">
+                <li>
+                  <i class="fa-li fa fa-check mb-4"></i>
+                  <span>ORM's for application and database interaction</span>: 
+                  Entity Framework (Migrations), Dapper.
+                </li>
               
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>Creation and consumption of API's REST</span>: 
+                  HTTP Protocol, Postman, Swagger
+                </li>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>User and security system</span>: Identity, 
+                  Authentication, Authorization, Json Web Token
+                </li>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>Common ASP.NET Core tools/patterns/libraries</span>: 
+                  C#, MVC, LINQ, xUnit, Dependency Injection, AutoMapper.
+                </li>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>Relational databases</span>: SQL Server, queries, 
+                  INNER JOINS, store procedures, triggers, constraints, foreign keys.
+                </li>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>Basic frontend skills</span>: Angular (Material, Modules, 
+                  Leafleat, Markdown), Razor, TypeScript, HTML, CSS, Bootstrap, JQuery.
+                </li>
+              
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  <span>Support Tools and Methodologies</span>: Git/Github, debugger, 
+                  Azure, Visual Studio/Visual Studio Code.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
 
         <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
+          <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
             data-bs-target="#detailedProgramming" aria-expanded="true" aria-controls="detailedProgramming">
-              <div class="subheading mb-0">Detailed Programming Skills</div>
+              <div class="subheading mb-0">Skills: Long Summary</div>
             </button>
           </h2>
           <div id="detailedProgramming" class="accordion-collapse collapse hide"
-          aria-labelledby="headingThree" >
-            <div class="accordion-body">
-
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#nonProgrammingSkills" aria-expanded="true" aria-controls="nonProgrammingSkills">
-              <div class="subheading mb-0">Relevant non-programming skills</div>
-            </button>
-          </h2>
-          <div id="nonProgrammingSkills" class="accordion-collapse collapse hide"
-          aria-labelledby="headingFour" >
+          aria-labelledby="headingTwo" data-bs-parent="#accordionSkills">
             <div class="accordion-body">
               <ul class="fa-ul mb-0 longSummary">
                 <li>
@@ -111,9 +138,9 @@
                   and CSS) and <span>Razor</span> (C#, HTML and CSS). Simple
                   views focused on displaying sorted information and testing
                   the methods in the Backend, for example, <span>posting
-                    information</span> from a form to the database, <span>getting
-                    information</span> from the database and <span>displaying the
-                    sorted information</span> in the browser.
+                  information</span> from a form to the database, <span>getting
+                  information</span> from the database and <span>displaying the
+                  sorted information</span> in the browser.
                 </li>
               
                 <br>
@@ -129,15 +156,27 @@
             </div>
           </div>
         </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThird">
+            <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#nonProgrammingSkills" aria-expanded="true" aria-controls="nonProgrammingSkills">
+              <div class="subheading mb-0">Relevant non-programming skills</div>
+            </button>
+          </h2>
+          <div id="nonProgrammingSkills" class="accordion-collapse collapse hide"
+          aria-labelledby="headingThird" data-bs-parent="#accordionSkills">
+            <div class="accordion-body">
+              <ul class="fa-ul mb-0">
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  Languages: English B1 (Conversational), Spanish Native.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-
-      <!-- <ul class="fa-ul mb-0">
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Languages: English B1 (Conversational), Spanish Native.
-        </li>
-      </ul> -->
         
     </div>
 </section>
