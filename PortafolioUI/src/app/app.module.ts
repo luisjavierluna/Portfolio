@@ -6,7 +6,6 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ToolsIconsComponent } from './skills/tools-icons/tools-icons.component';
-import { DetailedSkillsComponent } from './skills/detailed-skills/detailed-skills.component';
 import { SummarySkillsComponent } from './skills/summary-skills/summary-skills.component';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { SummarySkillsComponent } from './skills/summary-skills/summary-skills.c
     HomeComponent,
     SkillsComponent,
     ToolsIconsComponent,
-    DetailedSkillsComponent,
     SummarySkillsComponent
   ],
   imports: [
