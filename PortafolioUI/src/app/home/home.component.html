@@ -6,15 +6,32 @@
         <h2 class="mb-5">
             .NET Backend Developer
         </h2>
-        <div class="cotact-data mb-5">
+        <div class="cotact-data subheadingHome mb-5">
             <div>
                 Currently living in: <span>Juventino Rosas, Guanajuato.</span> 
             </div>
+
             <div>
-                Email: <span><a href="mailto:javierlunaluis@gmail.com">javierlunaluis@gmail.com</a></span>
+                Email: 
+                <button class="badge rounded-pill showButton" (click)="showEmail()" *ngIf="!emailInSight">
+                  {{showHideText}}
+                </button> 
+                
+                <a class="hidden-data" href="mailto:javierlunaluis@gmail.com" *ngIf="emailInSight">
+                    javierlunaluis@gmail.com
+                </a>
+
             </div>
+
             <div>
-                Tel: <span>(412) --- ---- </span>
+                Tel: <span *ngIf="!numberInSight">(412) </span>
+                <button class="badge rounded-pill showButton" (click)="showNumber()" *ngIf="!numberInSight">
+                    Show More
+                </button> 
+        
+                <span class="hidden-data" *ngIf="numberInSight">
+                    Plase send me an email or use the contact form at the botton of this page asking for it
+                </span>
             </div>
         </div>
 
