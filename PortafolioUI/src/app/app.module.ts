@@ -9,6 +9,7 @@ import { ToolsIconsComponent } from './skills/tools-icons/tools-icons.component'
 import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
