@@ -9,6 +9,6 @@ namespace PortfolioAPI.Data
         {
         }
 
-        DbSet<ContactForm> ContactForms { get; set; }
+        public DbSet<ContactForm> ContactForms { get; set; }
     }
 }
