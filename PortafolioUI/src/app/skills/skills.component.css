@@ -66,3 +66,16 @@ p {
 span {
     font-weight: 700;
 }
+
+.tecnology {
+    position: relative;
+    display: inline-block;
+    line-height: normal;
+    align-items: center;
+}
+
+.tecnology img{
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 0.5rem;
+}

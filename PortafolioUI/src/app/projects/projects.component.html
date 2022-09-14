@@ -13,8 +13,8 @@
                                 <h5 class="card-title">{{listOfProjects[i].projectTitle}}</h5>
                                 <p class="card-text">{{listOfProjects[i].shortDescription}}</p>
                                 <p class="card-text">{{listOfProjects[i].longDescription}}</p>
-                                <div *ngFor="let tecnology of listOfProjects[i].tecnologies;">
-                                    <span class="badge bg-primary">{{tecnology}}</span>
+                                <div class="tecnology" *ngFor="let tecnology of listOfProjects[i].tecnologies;">
+                                    <img  src="{{tecnology}}" />
                                 </div>
                             </div>
 

@@ -73,3 +73,16 @@ p {
 .bg-primary {
     background-color: #3859bd !important;
 }
+
+.tecnology {
+    position: relative;
+    display: inline-block;
+    line-height: normal;
+    align-items: center;
+}
+
+.tecnology img{
+    max-width: 2rem;
+    max-height: 2rem;
+    margin: 0.5rem;
+}

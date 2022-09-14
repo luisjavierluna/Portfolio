@@ -4,7 +4,13 @@
       
       <div class="subheading mb-0">Main Stack</div>
 
-      <app-tools-icons></app-tools-icons>
+      <div class="mb-3">
+        <ul class="list-inline dev-icons mb-4 tecnology" *ngFor="let icon of toolsIcons; let i = index">
+            <li class="list-inline-item">
+                <img src="{{toolsIcons[i]}}" alt="">
+            </li>
+        </ul>
+    </div>
 
       <div class="accordion" id="accordionSkills">
 
