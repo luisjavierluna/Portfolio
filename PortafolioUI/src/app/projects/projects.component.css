@@ -71,7 +71,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #3859bd !important;
+    background-color: #1A5E63 !important;
 }
 
 .tecnology {
@@ -85,4 +85,12 @@ p {
     max-width: 2rem;
     max-height: 2rem;
     margin: 0.5rem;
+}
+
+.btn-dark {
+    background-color: #143642;
+}
+
+.btn-dark:hover {
+    background-color: #1A5E63;
 }

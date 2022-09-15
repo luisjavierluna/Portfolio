@@ -55,3 +55,11 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+.btn-primary {
+    background-color: #143642;
+}
+
+.btn-primary:hover {
+    background-color: #1A5E63;
+}

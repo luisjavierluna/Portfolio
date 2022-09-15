@@ -64,3 +64,11 @@ p {
 .resume-date {
     width: 15rem;
 }
+
+.lapse{
+    color: #1A5E63;
+}
+
+a {
+    color: #1A5E63;
+}
