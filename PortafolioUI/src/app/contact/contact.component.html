@@ -3,23 +3,32 @@
         <h2 class="mb-5">Contact</h2>
 
         <div class="cards-form">
-            <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="form-group mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input class="form-control" id="name" name="name" placeholder="Write your name here..." 
-                    [(ngModel)]="contactForm.name" />
+                    <label class="form-label">Name</label>
+                    <input formControlName="name" class="form-control" placeholder="Write your name here..." />
+                    <span class="text-danger"
+                    *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">
+                        The field "Name" is required
+                    </span>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="mail@example.com..." 
-                    [(ngModel)]="contactForm.email" />
+                    <label class="form-label">Email</label>
+                    <input formControlName="email" type="email" class="form-control" placeholder="mail@example.com..." />
+                    <span class="text-danger"
+                    *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">
+                        The field "Email" is required
+                    </span>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Write your subjet and message here..."
-                    [(ngModel)]="contactForm.message"></textarea>
+                    <label class="form-label">Message</label>
+                    <textarea formControlName="message" class="form-control" rows="3" placeholder="Write your subjet and message here..."></textarea>
+                    <span class="text-danger"
+                    *ngIf="form.get('message')?.hasError('required') && form.get('message')?.touched">
+                        The field "Message" is required
+                    </span>
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Send</button>
             </form>
         </div>
     </div>
