@@ -13,8 +13,6 @@ export class ContactFormService {
   constructor(private http: HttpClient) { }
 
   addContactForm(contactForm: ContactForm): Observable<ContactForm>{
-    contactForm.id = 'B4243256-48EE-4AFE-AF76-70566A27E652';
-    contactForm.contactDay = '2022-09-14';
     return this.http.post<ContactForm>(this.baseUrl, contactForm);
   }
 }
