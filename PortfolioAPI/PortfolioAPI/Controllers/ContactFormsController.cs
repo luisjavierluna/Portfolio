@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PortfolioAPI.Data;
 using PortfolioAPI.Models;
+using PortfolioAPI.Services;
 
 namespace PortfolioAPI.Controllers
 {
@@ -9,20 +9,18 @@ namespace PortfolioAPI.Controllers
     [ApiController]
     public class ContactFormsController : ControllerBase
     {
-        private readonly ContactFormDbContext contactFormDbContext;
+        private readonly ISendgridEmailService sendgridEmailService;
 
-        public ContactFormsController(ContactFormDbContext contactFormDbContext)
+        public ContactFormsController(
+            ISendgridEmailService sendgridEmailService)
         {
-            this.contactFormDbContext = contactFormDbContext;
+            this.sendgridEmailService = sendgridEmailService;
         }
 
         [HttpPost]
         public async Task<IActionResult> AddContactForm([FromBody] ContactForm contactForm)
         {
-            contactForm.Id = Guid.NewGuid();
-            contactForm.ContactDay = DateTime.Now;
-            await contactFormDbContext.ContactForms.AddAsync(contactForm);
-            await contactFormDbContext.SaveChangesAsync();
+            await sendgridEmailService.Send(contactForm);
             return Ok(contactForm);
         }
     }

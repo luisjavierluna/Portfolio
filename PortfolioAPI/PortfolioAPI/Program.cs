@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PortfolioAPI.Data;
+using PortfolioAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<ContactFormDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ContactFormConnectionString")));
+builder.Services.AddTransient<ISendgridEmailService, SendgridEmailService>();
 
 builder.Services.AddCors(options =>
 {
