@@ -36,22 +36,27 @@ export class ContactComponent implements OnInit {
   }
   
   onSubmit(){
-    console.log(this.form);
-    
-    
-    
-    // this.contactFormService.addContactForm(this.contactForm)
-    // .subscribe(
-    //   response => {
-    //     this.contactForm = {
-    //       id: '',
-    //       name: '',
-    //       email: '',
-    //       message: '',
-    //       contactDay: ''
-    //     }
-    //   }
-    // )
+
+    this.contactForm = {
+      id: '',
+      name: this.form.value.name,
+      email: this.form.value.email,
+      message: this.form.value.message,
+      contactDay: ''
+    }
+
+    this.contactFormService.addContactForm(this.contactForm)
+    .subscribe(
+      response => {
+        this.contactForm = {
+          id: '',
+          name: '',
+          email: '',
+          message: '',
+          contactDay: ''
+        }
+      }
+    )
   }
 
 }
