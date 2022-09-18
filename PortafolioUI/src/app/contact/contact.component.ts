@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ContactFormService } from '../contact-form.service';
 import { ContactForm } from '../models/ContactForm';
 
@@ -9,7 +10,10 @@ import { ContactForm } from '../models/ContactForm';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  constructor(private contactFormService: ContactFormService, private formBuilder: FormBuilder) { }
+  constructor(
+    private contactFormService: ContactFormService, 
+    private formBuilder: FormBuilder, 
+    private router: Router) { }
   
   form: FormGroup = this.formBuilder.group({})
   
@@ -44,21 +48,24 @@ export class ContactComponent implements OnInit {
       message: this.form.value.message,
       contactDay: ''
     }
-
+    
     this.contactFormService.addContactForm(this.contactForm)
-    .subscribe(
-      response => {
+    .subscribe({
+      next: response => {
         this.contactForm = {
           id: '',
           name: '',
           email: '',
           message: '',
           contactDay: ''
-        }
+        };
+        this.router.navigate(['/submitted-form'])
+      },
+      error: error => this.router.navigate(['/submitted-fail'])
       }
     )
   }
-
+  
   getErrorFieldName(){
     var fieldName = this.form.get('name');
     

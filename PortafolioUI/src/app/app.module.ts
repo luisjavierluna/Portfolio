@@ -11,6 +11,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SubmittedFormComponent } from './contact/submitted-form/submitted-form.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SubmittedFailComponent } from './contact/submitted-fail/submitted-fail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AppRoutingModule } from './app-routing.module';
     SkillsComponent,
     ProjectsComponent,
     ResumeComponent,
-    ContactComponent
+    ContactComponent,
+    SubmittedFormComponent,
+    LandingPageComponent,
+    SubmittedFailComponent,
   ],
   imports: [
     BrowserModule,
