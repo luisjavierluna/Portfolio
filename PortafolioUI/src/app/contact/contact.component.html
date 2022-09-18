@@ -7,25 +7,22 @@
                 <div class="form-group mb-3">
                     <label class="form-label">Name</label>
                     <input formControlName="name" class="form-control" placeholder="Write your name here..." />
-                    <span class="text-danger"
-                    *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">
-                        The field "Name" is required
+                    <span class="text-danger" *ngIf="form.invalid && form.get('name')?.touched">
+                        {{getErrorFieldName()}}
                     </span>
                 </div>
                 <div class="form-group mb-3">
                     <label class="form-label">Email</label>
                     <input formControlName="email" type="email" class="form-control" placeholder="mail@example.com..." />
-                    <span class="text-danger"
-                    *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">
-                        The field "Email" is required
+                    <span class="text-danger" *ngIf="form.invalid && form.get('email')?.touched">
+                        {{getErrorFieldEmail()}}
                     </span>
                 </div>
                 <div class="form-group mb-3">
                     <label class="form-label">Message</label>
                     <textarea formControlName="message" class="form-control" rows="3" placeholder="Write your subjet and message here..."></textarea>
-                    <span class="text-danger"
-                    *ngIf="form.get('message')?.hasError('required') && form.get('message')?.touched">
-                        The field "Message" is required
+                    <span class="text-danger" *ngIf="form.invalid && form.get('message')?.touched">
+                        {{getErrorFieldMessage()}}
                     </span>
                 </div>
                 <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Send</button>

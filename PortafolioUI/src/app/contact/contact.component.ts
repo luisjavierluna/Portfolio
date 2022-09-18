@@ -59,4 +59,30 @@ export class ContactComponent implements OnInit {
     )
   }
 
+  getErrorFieldName(){
+    var fieldName = this.form.get('name');
+    
+    if(fieldName?.hasError('required')){
+      return 'The field name is required'
+    }
+    return '';
+  }
+
+  getErrorFieldEmail(){
+    var fieldEmail = this.form.get('name');
+    
+    if(fieldEmail?.hasError('required')){
+      return 'The field email is required'
+    }
+    return '';
+  }
+
+  getErrorFieldMessage(){
+    var fieldMessage = this.form.get('name');
+    
+    if(fieldMessage?.hasError('required')){
+      return 'The field message is required'
+    }
+    return '';
+  }
 }
