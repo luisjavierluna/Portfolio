@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
     
     this.contactFormService.addContactForm(this.contactForm)
     .subscribe({
-      next: response => {
+      next: () => {
         this.contactForm = {
           id: '',
           name: '',
@@ -61,7 +61,7 @@ export class ContactComponent implements OnInit {
         };
         this.router.navigate(['/submitted-form'])
       },
-      error: error => this.router.navigate(['/submitted-fail'])
+      error: () => this.router.navigate(['/submitted-fail'])
       }
     )
   }
