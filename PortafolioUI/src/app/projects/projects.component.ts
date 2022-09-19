@@ -59,7 +59,7 @@ export class ProjectsComponent implements OnInit {
         './assets/images/logos/BOOTSTRAP_logo.png',
       ],
       imageURL: './assets/images/PortfolioScreenshoot.png',
-      link: 'https://github.com/luisjavierluna',
+      link: 'https://luisjavierluna.github.io/Portfolio/',
       githublink: 'https://github.com/luisjavierluna/Portfolio'
     }
   ]
