@@ -2,31 +2,26 @@
     <div class="resume-section-content">
         <h2 class="mb-5">Contact</h2>
 
+        <app-show-errors [serverErrors]="serverErrors"></app-show-errors>
+
         <div class="cards-form">
             <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="form-group mb-3">
                     <label class="form-label">Name</label>
                     <input formControlName="name" class="form-control" placeholder="Write your name here..." />
-                    <span class="text-danger" *ngIf="form.invalid && form.get('name')?.touched">
-                        {{getErrorFieldName()}}
-                    </span>
+                    <span class="text-danger" *ngIf="form.invalid">{{getErrorFieldName()}}</span>
                 </div>
                 <div class="form-group mb-3">
                     <label class="form-label">Email</label>
                     <input formControlName="email" type="email" class="form-control" placeholder="mail@example.com..." />
-                    <span class="text-danger" *ngIf="form.invalid && form.get('email')?.touched">
-                        {{getErrorFieldEmail()}}
-                    </span>
+                    <span class="text-danger" *ngIf="form.invalid">{{getErrorFieldEmail()}}</span>
                 </div>
                 <div class="form-group mb-3">
                     <label class="form-label">Message</label>
                     <textarea formControlName="message" class="form-control" rows="3" placeholder="Write your subjet and message here..."></textarea>
-                    <span class="text-danger" *ngIf="form.invalid && form.get('message')?.touched">
-                        {{getErrorFieldMessage()}}
-                    </span>
+                    <span class="text-danger" *ngIf="form.invalid">{{getErrorFieldMessage()}}</span>
                 </div>
                 <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Send</button>
-                <!-- <button type="submit" class="btn btn-primary" (click)="sendForm()" [disabled]="form.invalid">Send</button> -->
             </form>
         </div>
     </div>

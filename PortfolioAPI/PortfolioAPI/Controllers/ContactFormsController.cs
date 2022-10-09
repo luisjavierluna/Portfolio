@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PortfolioAPI.Data;
 using PortfolioAPI.Models;
 
@@ -14,6 +15,13 @@ namespace PortfolioAPI.Controllers
         public ContactFormsController(ContactFormDbContext contactFormDbContext)
         {
             this.contactFormDbContext = contactFormDbContext;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllContactForms()
+        {
+            var contactForms = await contactFormDbContext.ContactForms.ToListAsync();
+            return Ok(contactForms);
         }
 
         [HttpPost]

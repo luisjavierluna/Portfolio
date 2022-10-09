@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ContactFormService } from '../contact-form.service';
 import { ContactForm } from '../models/ContactForm';
+import { parseErrorsAPI } from '../utilities/utilities';
 
 @Component({
   selector: 'app-contact',
@@ -24,6 +25,8 @@ export class ContactComponent implements OnInit {
     message: '',
     contactDay: ''
   }
+
+  serverErrors: string[] = []
   
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -61,7 +64,8 @@ export class ContactComponent implements OnInit {
         };
         this.router.navigate(['/submitted-form'])
       },
-      error: () => this.router.navigate(['/submitted-fail'])
+      // error: () => this.router.navigate(['/submitted-fail'])
+      error: error => this.serverErrors = parseErrorsAPI(error)
       }
     )
   }
@@ -69,26 +73,26 @@ export class ContactComponent implements OnInit {
   getErrorFieldName(){
     var fieldName = this.form.get('name');
     
-    if(fieldName?.hasError('required')){
-      return 'The field name is required'
+    if(fieldName?.hasError('required') && fieldName?.touched){
+      return '-The field name is required'
     }
     return '';
   }
 
   getErrorFieldEmail(){
-    var fieldEmail = this.form.get('name');
+    var fieldEmail = this.form.get('email');
     
-    if(fieldEmail?.hasError('required')){
-      return 'The field email is required'
+    if(fieldEmail?.hasError('required')  && fieldEmail?.touched){
+      return '-The field email is required'
     }
     return '';
   }
 
   getErrorFieldMessage(){
-    var fieldMessage = this.form.get('name');
+    var fieldMessage = this.form.get('message');
     
-    if(fieldMessage?.hasError('required')){
-      return 'The field message is required'
+    if(fieldMessage?.hasError('required') && fieldMessage?.touched){
+      return '-The field message is required'
     }
     return '';
   }

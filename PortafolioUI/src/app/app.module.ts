@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SubmittedFormComponent } from './contact/submitted-form/submitted-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SubmittedFailComponent } from './contact/submitted-fail/submitted-fail.component';
+import { ShowErrorsComponent } from './utilities/show-errors/show-errors.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SubmittedFailComponent } from './contact/submitted-fail/submitted-fail.
     SubmittedFormComponent,
     LandingPageComponent,
     SubmittedFailComponent,
+    ShowErrorsComponent,
   ],
   imports: [
     BrowserModule,
