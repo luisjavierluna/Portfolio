@@ -10,169 +10,139 @@
                 <img src="{{toolsIcons[i]}}" alt="">
             </li>
         </ul>
-    </div>
+      </div>
 
-      <div class="accordion" id="accordionSkills">
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#summaryProgramming" aria-expanded="true" aria-controls="summaryProgramming">
-              <div class="subheading mb-0">Skills: Short Summary</div>
-            </button>
-          </h2>
-          <div id="summaryProgramming" class="accordion-collapse collapse show"
-          aria-labelledby="headingOne" data-bs-parent="#accordionSkills">
-            <div class="accordion-body">
-              <ul class="fa-ul mb-0 longSummary">
-                <li>
-                  <i class="fa-li fa fa-check mb-4"></i>
-                  <span>ORM's for application and database interaction</span>: 
-                  Entity Framework (Migrations), Dapper.
-                </li>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>Creation and consumption of API's REST</span>: 
-                  HTTP Protocol, Postman, Swagger
-                </li>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>User and security system</span>: Identity, 
-                  Authentication, Authorization, Json Web Token
-                </li>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>Common ASP.NET Core tools/patterns/libraries</span>: 
-                  C#, MVC, LINQ, xUnit, Dependency Injection, AutoMapper.
-                </li>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>Relational databases</span>: SQL Server, queries, 
-                  INNER JOINS, store procedures, triggers, constraints, foreign keys.
-                </li>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>Basic frontend skills</span>: Angular (Material, Modules, 
-                  Leafleat, Markdown), Razor, TypeScript, HTML, CSS, Bootstrap, JQuery.
-                </li>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>Support Tools and Methodologies</span>: Git/Github, debugger, 
-                  Azure, Visual Studio/Visual Studio Code.
-                </li>
-              </ul>
-            </div>
+      <div>
+        <ul class="nav nav-tabs mb-3">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#shortSummary">Short Summary</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#longSummary">Long Summary</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#otherSkills">Non-programming skills</button>
+          </li>
+        </ul>
+    
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="shortSummary">
+            <ul>
+              <li>
+                <i class="fa-li fa fa-check mb-4"></i>
+                <span>ORM's for application and database interaction</span>: 
+                Entity Framework (Migrations), Dapper.
+              </li>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>Creation and consumption of API's REST</span>: 
+                HTTP Protocol, Postman, Swagger
+              </li>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>User and security system</span>: Identity, 
+                Authentication, Authorization, Json Web Token
+              </li>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>Common ASP.NET Core tools/patterns/libraries</span>: 
+                C#, MVC, LINQ, xUnit, Dependency Injection, AutoMapper.
+              </li>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>Relational databases</span>: SQL Server, queries, 
+                INNER JOINS, store procedures, triggers, constraints, foreign keys.
+              </li>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>Basic frontend skills</span>: Angular (Material, 
+                Leafleat, Markdown), Razor, TypeScript, HTML, CSS, Bootstrap, JQuery.
+              </li>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>Support Tools and Methodologies</span>: Git/Github, debugger, 
+                Visual Studio/Visual Studio Code.
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#detailedProgramming" aria-expanded="true" aria-controls="detailedProgramming">
-              <div class="subheading mb-0">Skills: Long Summary</div>
-            </button>
-          </h2>
-          <div id="detailedProgramming" class="accordion-collapse collapse hide"
-          aria-labelledby="headingTwo" data-bs-parent="#accordionSkills">
-            <div class="accordion-body">
-              <ul class="fa-ul mb-0 longSummary">
-                <li>
-                  <i class="fa-li fa fa-check mb-4"></i>
-                  Connection between the application and the database using ORM's
-                  like <span>Entity Framework (EF)</span> and <span>Dapper</span>, I use EF
-                  <span>migrations</span> to adjust and update the database design, without
-                  losing information and having all the changes tracked.
-                </li>
-              
-                <br>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>REST API's</span> for communication between <span>client,
-                    server and database</span> through methods based on the <span>HTTP
-                    protocol</span>. Testing and documentation of methods (end points)
-                  through <span>Postman</span> and <span>Swagger</span>.
-                </li>
-              
-                <br>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  <span>User system</span> using <span>Identity</span>, user
-                  creation, email confirmation, password confirmation and management,
-                  <span>authorization</span> and <span>authentication</span> using
-                  <span>JSON Web Token (JWT)</span> through HTTP request.
-                </li>
-              
-                <br>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  Additional ASP.NET Core tools/patterns/libraries:
-                  <span>Model-View-Controller(MVC)</span> pattern, <span>dependency
-                    injection</span> (Scope, Transient and Singleton),
-                  <span>middleware</span> creation and use, object mapping with
-                  <span>AutoMapper</span>, unit testing with <span>xUnit</span>,
-                  queries in C# using <span>LINQ</span> etc.
-                </li>
-              
-                <br>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  Relational databases using <span>SQL Server</span>,
-                  <span>CRUD's</span> development, table design and
-                  correlation between them using <span>foreign keys</span>.
-                  <span>Internal programming language</span> for
-                  SQL Server queries. Union of information from several
-                  tables through <span>INNER JOINS</span>. Use of
-                  <span>store procedures</span>, <span>triggers</span>
-                  and <span>constraints</span>.
-                </li>
-              
-                <br>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  Basic frontend using <span>Angular</span> (TypeScript, HTML
-                  and CSS) and <span>Razor</span> (C#, HTML and CSS). Simple
-                  views focused on displaying sorted information and testing
-                  the methods in the Backend, for example, <span>posting
-                  information</span> from a form to the database, <span>getting
-                  information</span> from the database and <span>displaying the
-                  sorted information</span> in the browser.
-                </li>
-              
-                <br>
-              
-                <li>
-                  <i class="fa-li fa fa-check"></i>
-                  Support Tools: <span>Git/Github</span> for code version control,
-                  <span>debugger</span> to debug the code, <span>Azure</span> to
-                  deploy applications in the cloud, <span>Visual
-                    Studio/Visual Studio Code</span> as IDE's.
-                </li>
-              </ul>
-            </div>
+    
+          <div class="tab-pane fade" id="longSummary">
+            <ul>
+              <li>
+                <i class="fa-li fa fa-check mb-4"></i>
+                Connection between the application and the database using ORM's like 
+                <span>Entity Framework (EF)</span> and <span>Dapper</span>, I use EF<span> migrations</span> 
+                to adjust and update the database design, without losing information and having all the changes tracked.
+              </li>
+            
+              <br>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>REST API's</span> for communication between <span>client, server and database</span> 
+                through methods based on the <span>HTTP protocol</span>. Testing and documentation of methods 
+                (end points) through <span>Postman</span> and <span>Swagger</span>.
+              </li>
+            
+              <br>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                <span>User system</span> using <span>Identity</span>, user creation, email confirmation, 
+                password confirmation and management, <span>authorization</span> and <span>authentication</span> 
+                using <span>JSON Web Token (JWT)</span> through HTTP request.
+              </li>
+            
+              <br>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                Additional ASP.NET Core tools/patterns/libraries: <span>Model-View-Controller(MVC)</span> 
+                pattern, <span>dependencyinjection</span> (Scope, Transient and Singleton), object mapping 
+                with <span>AutoMapper</span>, unit testing with <span>xUnit</span>, queries in C# using 
+                <span>LINQ</span> etc.
+              </li>
+            
+              <br>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                Relational databases using <span>SQL Server</span>, <span>CRUD's</span> development, table 
+                design and correlation between them using <span>foreign keys</span>. <span>Internal programming 
+                language</span> for SQL Server queries. Union of information from several tables through 
+                <span>INNER JOINS</span>. Use of <span>store procedures</span>, <span>triggers</span> 
+                and <span>constraints</span>.
+              </li>
+            
+              <br>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                Basic frontend using <span>Angular</span> (TypeScript, HTML and CSS) and <span>Razor</span> 
+                (C#, HTML and CSS). Simple views focused on displaying sorted information and testing the 
+                methods in the Backend, for example, <span>posting information</span> from a form to the 
+                database, <span>getting information</span> from the database and <span>displaying the 
+                sorted information</span> in the browser.
+              </li>
+            
+              <br>
+            
+              <li>
+                <i class="fa-li fa fa-check"></i>
+                Support Tools: <span>Git/Github</span> for code version control, <span>debugger</span> 
+                to debug the code, <span>Visual Studio/Visual Studio Code</span> as IDE's.
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThird">
-            <button class="accordion-button buttonStyle" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#nonProgrammingSkills" aria-expanded="true" aria-controls="nonProgrammingSkills">
-              <div class="subheading mb-0">Non-programming skills</div>
-            </button>
-          </h2>
-          <div id="nonProgrammingSkills" class="accordion-collapse collapse hide"
-          aria-labelledby="headingThird" data-bs-parent="#accordionSkills">
-            <div class="accordion-body">
+    
+          <div class="tab-pane fade" id="otherSkills">
+            <div class="tab-content__body">
               <ul class="fa-ul mb-0">
                 <li>
                   <i class="fa-li fa fa-check"></i>

@@ -20,11 +20,11 @@
 
                             <div class="card-footer">
                                 <div class="footer-projet">
-                                    <a class="btn btn-dark" href={{listOfProjects[i].link}} target="_blank"
-                                        rel="noopener noreferrer">View Project</a>
+                                    <a class="btn btn-dark" href={{listOfProjects[i].link}} *ngIf="listOfProjects[i].link !== ''" 
+                                    target="_blank" rel="noopener noreferrer">Check Website</a>
 
-                                    <a class="btn btn-dark" href={{listOfProjects[i].githublink}} target="_blank"
-                                        rel="noopener noreferrer">
+                                    <a class="btn btn-dark" href={{listOfProjects[i].githublink}} *ngIf="listOfProjects[i].githublink !== ''"
+                                    target="_blank" rel="noopener noreferrer">
                                         <i class="fab fa-github"></i>Github
                                     </a>
                                 </div>
