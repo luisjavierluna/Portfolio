@@ -61,7 +61,7 @@ export class ProjectsComponent implements OnInit {
         './assets/images/logos/JQUERY_logo.png',
       ],
       imageURL: './assets/images/ExpenseControlScreenshoot.png',
-      link: '',
+      link: 'https://expensecontrolaspnet20221116161254.azurewebsites.net/users/login?ReturnUrl=%2F',
       githublink: 'https://github.com/luisjavierluna/ExpenseControl_ASP.NET'
     },
     {
