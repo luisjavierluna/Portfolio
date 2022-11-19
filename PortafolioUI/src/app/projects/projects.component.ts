@@ -77,7 +77,7 @@ export class ProjectsComponent implements OnInit {
         './assets/images/logos/BOOTSTRAP_logo.png',
       ],
       imageURL: './assets/images/MoviesScreenshoot.png',
-      link: '',
+      link: 'https://luisjavierluna.github.io/Movies/',
       githublink: 'https://github.com/luisjavierluna/Movies'
     },
     
