@@ -59,6 +59,7 @@ export class ProjectsComponent implements OnInit {
         './assets/images/logos/CSS_logo.png',
         './assets/images/logos/BOOTSTRAP_logo.png',
         './assets/images/logos/JQUERY_logo.png',
+        './assets/images/logos/AZURE_logo.png',
       ],
       imageURL: './assets/images/ExpenseControlScreenshoot.png',
       link: 'https://expensecontrolaspnet20221116161254.azurewebsites.net/users/login?ReturnUrl=%2F',
@@ -66,7 +67,7 @@ export class ProjectsComponent implements OnInit {
     },
     {
       projectTitle: 'Movies',
-      shortDescription: 'Movie Theater Website: Website showing current and upcoming releases made with ASP.NET and angular',
+      shortDescription: 'Movie Theater Website: Website showing current and upcoming releases made with ASP.NET and Angular',
       longDescription: 'API made with ASP.NET and UI made with Angular. I used EF Core as ORM, Identity and Route Guards for user system, authentication and authorization, Angular Material, Markdown and Maps with Leafleat.',
       tecnologies: [
         './assets/images/logos/C_SHARP_logo.png',
@@ -75,14 +76,29 @@ export class ProjectsComponent implements OnInit {
         './assets/images/logos/Angular_logo.png',
         './assets/images/logos/Typescript_logo.png',
         './assets/images/logos/BOOTSTRAP_logo.png',
+        './assets/images/logos/AZURE_logo.png',
       ],
       imageURL: './assets/images/MoviesScreenshoot.png',
       link: 'https://luisjavierluna.github.io/Movies/',
       githublink: 'https://github.com/luisjavierluna/Movies'
     },
-    
+    {
+    projectTitle: 'Bienes Raices',
+      shortDescription: 'Website to show houses for sale with all its details such as price, number of rooms, etc., made in ASP.NET and Angular',
+      longDescription: 'API made with ASP.NET and UI made with Angular. I used EF Core as ORM, Identity and Route Guards to manage the user system, authentication and authorization.',
+      tecnologies: [
+        './assets/images/logos/C_SHARP_logo.png',
+        './assets/images/logos/NET_CORE_logo.png',
+        './assets/images/logos/SQL_logo.png',
+        './assets/images/logos/Angular_logo.png',
+        './assets/images/logos/Typescript_logo.png',
+        './assets/images/logos/BOOTSTRAP_logo.png',
+      ],
+      imageURL: './assets/images/BienesRaicesSS.png',
+      link: '',
+      githublink: 'https://github.com/luisjavierluna/BienesRaices'
+    },
   ]
-
 
   ngOnInit(): void {
   }
